@@ -1,3 +1,7 @@
+import src.Item;
+import src.Statue;
+import src.Painting;
+import src.Vase;
 import java.util.Scanner;
 
 public class Test {

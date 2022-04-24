@@ -1,3 +1,4 @@
+package src;
 import java.util.Scanner;
 
 public class Statue extends Item
@@ -5,13 +6,13 @@ public class Statue extends Item
     private int  weight;
     private String colour;
     // constructors
-    Statue()
+    public Statue()
     {
         super(0, null);
         weight = 0;
         colour = null;
     }
-    Statue(int value, String creator, int weight, String colour)
+    public Statue(int value, String creator, int weight, String colour)
     {
         super(value, creator);
         this.weight = weight;

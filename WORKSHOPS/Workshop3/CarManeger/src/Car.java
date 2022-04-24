@@ -1,4 +1,4 @@
-
+package src;
 public class Car{
     private String colour;
     private int enginPower;
@@ -6,7 +6,7 @@ public class Car{
     private boolean parkingBreak;
 
     //constructor:
-    Car(String a, int b, boolean c, boolean p)
+    public Car(String a, int b, boolean c, boolean p)
     {
         colour = a;
         enginPower = b;
@@ -14,7 +14,7 @@ public class Car{
         parkingBreak = p;
     }
     //overloaded constructor
-    Car()
+    public Car()
     {
         colour = null;
         enginPower = 0;

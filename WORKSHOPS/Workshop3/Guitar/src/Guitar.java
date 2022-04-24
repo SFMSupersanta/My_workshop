@@ -1,4 +1,4 @@
-
+package src;
 public class Guitar {
 
     private String serialNumber;
@@ -9,7 +9,7 @@ public class Guitar {
     private String topWood;
  
     // constructor
-    Guitar()
+    public Guitar()
     {
         serialNumber = null;
         price = 0;
@@ -18,7 +18,7 @@ public class Guitar {
         backwood = null;
         topWood = null;
     }
-    Guitar(String inSerialNumber, int inPrice, String inBuilder, String inModel, String inBackwood, String inTopWood)
+    public Guitar(String inSerialNumber, int inPrice, String inBuilder, String inModel, String inBackwood, String inTopWood)
     {
         serialNumber = inSerialNumber;
         price = inPrice;

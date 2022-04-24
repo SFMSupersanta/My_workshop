@@ -1,16 +1,17 @@
+package src;
 import java.util.Scanner;
 
 public class Vase extends Item {
     private int height;
     private String material;
     // constructor
-    Vase()
+    public Vase()
     {
         super(0, null);
         height = 0;
         material = null;
     }
-    Vase(int value, String creator, int height, String material)
+    public Vase(int value, String creator, int height, String material)
     {
         super(value, creator);
         this.height = height;

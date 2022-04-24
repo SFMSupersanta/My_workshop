@@ -1,3 +1,4 @@
+package src;
 import java.util.Scanner;
 
 public class Painting extends Item {
@@ -6,7 +7,7 @@ public class Painting extends Item {
     private boolean isWatercolour;
     private boolean isFramed;
     // constructor
-    Painting() 
+    public Painting() 
     {
         super(0, null);
         height = 0;
@@ -14,7 +15,7 @@ public class Painting extends Item {
         isWatercolour = false;
         isFramed = false; 
     }
-    Painting(int value, String creator, int height, int width, boolean isWatercolour, boolean isFramed)
+    public Painting(int value, String creator, int height, int width, boolean isWatercolour, boolean isFramed)
     {
         super(value, creator);
         this.height = height;

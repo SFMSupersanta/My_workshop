@@ -1,18 +1,18 @@
+
 public class BeeColony extends Colony implements Role{
 
     private String type;
-    @Override
     public void createWorker() {
         System.out.println("Worker bees perform all the work of the bees");
         
     }
     // constructors
-    BeeColony()
+    public BeeColony()
     {
         super();
         type = null;
     }
-    BeeColony(int size, String place, String type)
+    public BeeColony(int size, String place, String type)
     {
         super(size, place);
         this.type = type;

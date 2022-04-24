@@ -1,11 +1,9 @@
-
-
 public abstract class Organization {
     public abstract void communicateByTool();
     protected int size;
     
     // constructor
-    Organization()
+    public Organization()
     {
         size = 0;
     }
@@ -14,7 +12,7 @@ public abstract class Organization {
     {
         return "the organization's size is " + size; 
     }
-    Organization(int size)
+    public Organization(int size)
     {
         this.size = size;
     }

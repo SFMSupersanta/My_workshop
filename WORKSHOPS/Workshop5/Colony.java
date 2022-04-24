@@ -1,16 +1,15 @@
-
 public class Colony extends Organization{
 
     private String place;
     public String getPlace() {
         return place;
     }
-    Colony()
+    public Colony()
     {
         super(0);
         place = null;
     }
-    Colony(int size, String place)
+    public Colony(int size, String place)
     {
         super(size);
         this.place = place;

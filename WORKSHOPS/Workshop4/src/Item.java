@@ -1,15 +1,16 @@
+package src;
 import java.util.Scanner;
 
 public class Item {
     protected int value;
     protected String creator;
     // constructor:
-    Item()
+    public Item()
     {
         value = 0;
         creator = null;
     }
-    Item(int value, String creator)
+    public Item(int value, String creator)
     {
         this.value = value;
         this.creator = creator;

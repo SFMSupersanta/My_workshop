@@ -1,17 +1,17 @@
+
 public class FPTUniversity extends University implements Role{
 
     private String address;
-    @Override
     public void createWorker() {
         System.out.println("providing human resources");
     }
     // constructors
-    FPTUniversity()
+    public FPTUniversity()
     {
         super();
         address = null;
     }
-    FPTUniversity(int size, String name, String address)
+    public FPTUniversity(int size, String name, String address)
     {
         super(size, name);
         this.address = address;

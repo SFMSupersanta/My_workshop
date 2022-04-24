@@ -1,4 +1,4 @@
-
+package src;
 
 public class PhoneNumer {
     private int area;
@@ -18,12 +18,12 @@ public class PhoneNumer {
     {
         this.number = number;
     }
-    PhoneNumer()
+    public PhoneNumer()
     {
         area = 0;
         number = null;
     }
-    PhoneNumer(int area, String number)
+    public PhoneNumer(int area, String number)
     {
         this.area = area;
         this.number = number;

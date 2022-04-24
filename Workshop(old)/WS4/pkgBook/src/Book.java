@@ -1,18 +1,18 @@
-
+package src;
 
 public class Book{
     private String title;
     private int page;
     private double cost;
     private boolean fiction;
-    Book()
+    public Book()
     {
         title = null;
         page = 0;
         cost = 0.0;
         fiction = false;
     }
-    Book(String title, int page, double cost, boolean fiction)
+    public Book(String title, int page, double cost, boolean fiction)
     {
         this.title = title;
         this.page = page;

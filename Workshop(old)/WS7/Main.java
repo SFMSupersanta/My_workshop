@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import src.IllegalRightTriangleException;
+import src.IllegalTriangleException;
+import src.RightTriangle;
 public class Main 
 {
     public static void main(String[] args) {

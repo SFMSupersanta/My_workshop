@@ -1,14 +1,15 @@
+package src;
 public class Molecules {
     public String structure;
     public String name;
     public double weight;
-    Molecules()
+    public Molecules()
     {
         structure = null;
         name = null;
         weight = 0.0;
     }
-    Molecules(String structure, String name, double weight)
+    public Molecules(String structure, String name, double weight)
     {
         this.structure = structure;
         this.name = name;

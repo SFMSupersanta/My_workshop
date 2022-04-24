@@ -1,14 +1,14 @@
-
+package src;
 
 public class Anagram {
     private String str1;
     private String str2;
-    Anagram()
+    public Anagram()
     {
         str1 = null;
         str2 = null;
     }
-    Anagram(String str1, String str2) {
+    public Anagram(String str1, String str2) {
         this.str1 = str1;
         this.str2 = str2;
     }

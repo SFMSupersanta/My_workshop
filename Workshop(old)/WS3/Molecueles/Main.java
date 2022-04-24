@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import src.Molecules;
 public class Main {
     public static void main(String[] args)
     {

@@ -1,3 +1,4 @@
+package src;
 import java.util.Scanner;
 public class Atoms {
     public int number;
@@ -7,14 +8,14 @@ public class Atoms {
     public int getNumber() {
         return number;
     }
-    Atoms()
+    public Atoms()
     {
         number = 0;
         symbol = null;
         name = null;
         weight = 0.0;
     }
-    Atoms(int number, String symbol, String name, double weight)
+    public Atoms(int number, String symbol, String name, double weight)
     {
         this.number = number;
         this.symbol = symbol;

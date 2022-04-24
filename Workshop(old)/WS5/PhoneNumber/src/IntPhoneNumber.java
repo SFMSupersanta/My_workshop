@@ -1,12 +1,13 @@
+package src;
 
 public class IntPhoneNumber extends PhoneNumer{
     private String countryCode;
-    IntPhoneNumber()
+    public IntPhoneNumber()
     {
         super();
         countryCode = null;
     }
-    IntPhoneNumber(int area, String number, String countryCode)
+    public IntPhoneNumber(int area, String number, String countryCode)
     {
         super(area, number);
         this.countryCode  = countryCode;

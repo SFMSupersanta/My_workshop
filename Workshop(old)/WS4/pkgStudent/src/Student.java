@@ -1,16 +1,16 @@
-
+import src.Student;
 
 public class Student {
     private String id;
     private String name;
     private double mark;
-    Student()
+    public Student()
     {
         id = null;
         name = null;
         mark = 0.0;
     }
-    Student(String id, String name, double mark)
+    public Student(String id, String name, double mark)
     {
         this.id = id;
         this.name = name;

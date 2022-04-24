@@ -1,3 +1,4 @@
+import src.Atoms;
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args)
@@ -14,7 +15,6 @@ public class Main {
                 status = false;
                 continue;
             }
-            bufferAtoms.display();
             atoms.add(bufferAtoms);
         }while(status);
         for(int i = 0; i < atoms.size(); i++)
@@ -22,7 +22,6 @@ public class Main {
             atoms.get(i).display();
         }
     }
-    
 }
 /*----------------------------------------------------------------
 3

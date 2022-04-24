@@ -1,3 +1,4 @@
+package src;
 
 public class RightTriangle{
     private int x;
@@ -12,6 +13,7 @@ public class RightTriangle{
             throw new IllegalRightTriangleException();
         else this.x = x; this.y = y; this.z = z;
     }
+    public RightTriangle(){}
     public int getX() { return x; }
     public int getY() { return y; }
     public int getZ() { return z; }

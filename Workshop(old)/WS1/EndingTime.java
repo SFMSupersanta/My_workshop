@@ -8,7 +8,7 @@ public class EndingTime {
         int minues = in.nextInt();
         System.out.println("Lasting time (minues):");
         int last = in.nextInt();
-        close(in);
+        in.close();
         int status = 0, overtime;
         if((last % 60) + minues >= 60) 
         {

@@ -16,6 +16,6 @@ public class IntArray {
         Arrays.sort(a);
         System.out.println(Arrays.toString(a));
         System.out.println("Max value: " + a[a.length - 1]);
+        in.close();
     }
-    
 }

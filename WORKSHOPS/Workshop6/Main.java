@@ -1,5 +1,4 @@
 import src.Inputter;
-import src.Student;
 import src.StudentList;
 public class Main {
     public static void main(String args[])
@@ -35,6 +34,7 @@ public class Main {
             }else if(choice == 6)
             {
                 System.out.println("Bye");
+                Inputter.sc.close();
             }
         } while(choice != 6);
     }

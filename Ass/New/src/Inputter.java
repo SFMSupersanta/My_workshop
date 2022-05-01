@@ -14,7 +14,7 @@ public class Inputter {
         System.out.println(msg);
         do
         {
-            while(!sc.hasNextInt())
+            while(!sc.hasNextDouble())
             {
                 System.out.println("Input a double!");
                 sc.nextLine();
@@ -57,7 +57,6 @@ public class Inputter {
         do
         {
             input = sc.nextLine();
-            System.out.println(input.length());
             if(input.length() == 0)
             System.out.println("Cannot be blank");
         } while (input.length() == 0);

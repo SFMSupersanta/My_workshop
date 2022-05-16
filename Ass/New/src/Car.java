@@ -1,5 +1,4 @@
 package src;
-import src.Brand;
 public class Car{
     private String carID;
     private String color;

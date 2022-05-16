@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import src.Inputter;
 import src.Brand;

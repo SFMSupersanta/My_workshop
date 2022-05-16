@@ -1,0 +1,4 @@
+Ab123;bruh bruh;100;3.3333
+Bc234;lmao;20;32.0
+Cd567;fuck;100;10000.0
+Abyss;Hell;10000;1.0E-5

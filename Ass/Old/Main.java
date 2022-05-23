@@ -1,8 +1,8 @@
 
 import java.util.ArrayList;
 
-import src.BookList;
-import src.Menu;
+import mainPackage.Menu;
+import mainPackage.BookList;
 
 public class Main {
     public static void main(String args[])

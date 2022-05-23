@@ -1,4 +1,4 @@
-package src;
+package mainPackage;
 
 public class Book{
     private String code;

@@ -3,7 +3,6 @@
 import java.util.Scanner;
 public class Inputter {
     public static Scanner sc = new Scanner(System.in);
-    
     public int inputInt(String msg, int min, int max)
     {
         if(max < min) 

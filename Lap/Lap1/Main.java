@@ -65,9 +65,12 @@ public class Main {
                     
                     do
                     {
-                        choice = input.inputInt("Type 1 to plus 2 matrices\nType 2 to multiply 2 matrices\n3 to return to the main menu\nYour choice: ", 1,3);
+                        choice = input.inputInt("Type 0 to subtract matrices\nType 1 to plus 2 matrices\nType 2 to multiply 2 matrices\n3 to return to the main menu\nYour choice: ", 0,3);
                         switch(choice)
                         {
+                            case 0:
+                                op.minusArrays();
+                            break;
                             case 1:
                                 op.plusArrays();
                             break;

@@ -1,0 +1,43 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\.."
+		},
+		{
+			"path": "c:\\Users\\Admin\\OneDrive\\Máy tính\\Project"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\Collage Excercise\\Summer 2022\\PRO-192\\Assignment"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\Collage Excercise"
+		},
+		{
+			"path": "F:\\Lesson_One"
+		},
+		{
+			"path": "F:\\Re-Lesson_One"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"bitset": "c",
+			"chrono": "c",
+			"algorithm": "c",
+			"variant": "c",
+			"typeindex": "c",
+			"typeinfo": "c",
+			"math.h": "c",
+			"stdbool.h": "c",
+			"string.h": "c",
+			"ctype.h": "c",
+			"random": "cpp",
+			"stdlib.h": "c",
+			"stdio.h": "c"
+		},
+		"java.project.sourcePaths": [
+			"premiumrepo/Ass/Old",
+			"Teaching"
+		]
+	}
+}

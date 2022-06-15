@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\.."
+		},
+		{
+			"path": "c:\\Users\\Admin\\OneDrive\\Máy tính\\Project"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"bitset": "c",
+			"chrono": "c",
+			"algorithm": "c",
+			"variant": "c",
+			"typeindex": "c",
+			"typeinfo": "c",
+			"math.h": "c",
+			"stdbool.h": "c",
+			"string.h": "c",
+			"ctype.h": "c",
+			"random": "cpp",
+			"stdlib.h": "c"
+		},
+		"java.project.sourcePaths": [
+			"premiumrepo/Ass/Old/src",
+			"premiumrepo/Ass/Old"
+		]
+	}
+}

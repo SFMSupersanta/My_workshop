@@ -12,49 +12,30 @@ public class Main {
             switch (choice) {
 
                 case 1: 
-                    System.out.println();
-                    int n  = input.inputInt("Type in the number: ",-1000000,1000000);
-                    int arr[] = new int[n];
-                    for(int i = 0; i < n; i+= 1)
-                    {
-                        arr[i] = input.inputInt("The " + (i+1) + " element: ",-1000000,1000000);
-                    }
+                    ArrOperations arrop = new ArrOperations();
                     
+                    System.out.println();
+                    arrop.inputArr();
                     do
                     {
                         choice = input.inputInt("Press 1 to find biggest, smallest elements\nPress 2 to sort the list assendingly\nPress 3 to sort the list decendingly\nPress 4 to find number of odds, evens\nPress 5 to return to main menu\nYour choice: ",1,5);
                         switch(choice)
                         {
                             case 1: 
-                                Arrays.sort(arr);
-                                System.out.println("The smallest element is: " + arr[0]);
-                                System.out.println("The biggest element is : " + arr[n-1]);
+                                arrop.sorting();
+                                System.out.println("The smallest element is: " + arrop.getMinimum());
+                                System.out.println("The biggest element is : " + arrop.getMaximum());
                             break;
                             case 2:
-                                Arrays.sort(arr);
-                                System.out.printf("sorted array: %s\n", Arrays.toString(arr));
+                                arrop.sorting();
+                                System.out.printf("sorted array: %s\n", arrop);
                             break;
                             case 3:
-                                Arrays.sort(arr);
-                                int rarr[] = new int[n];
-                                for(int i = 0; i < n; i+= 1) rarr[i] = arr[n-1-i];
-                                System.out.println("Reversed sorted array: " + Arrays.toString(rarr));
+                                arrop.revsort();
+                                System.out.println("Reversed sorted array: " + arrop);
                             break;
                             case 4:
-                                int odd=0, even=0;
-                                for(int i: arr)
-                                {
-                                    if(i % 2 == 0) odd += 1;
-                                    else even += 1;
-                                }
-                                System.out.println("Even numbers: ");
-                                for(int i: arr) if(i % 2 == 0) System.out.print(i + " ");
-                                System.out.println();
-                                System.out.println("Odd numbers: ");
-                                for(int i: arr) if(i % 2 == 1) System.out.print(i + " ");
-                                System.out.println();
-                                System.out.println("Number of odd: " + odd);
-                                System.out.println("Number of even: " + even);
+                                arrop.displayOddEven();
                             break;
                             default: System.out.println("Returning to the main menu");
                         }
@@ -62,24 +43,28 @@ public class Main {
                 break;
                 case 2:
                     Operations op = new Operations();
-                    
+                    op.inputArr();
                     do
                     {
                         choice = input.inputInt("Type 0 to subtract matrices\nType 1 to plus 2 matrices\nType 2 to multiply 2 matrices\n3 to return to the main menu\nYour choice: ", 0,3);
                         switch(choice)
                         {
                             case 0:
-                                op.minusArrays();
+                                if(op.isAddable())op.minusArrays();
+                                else System.out.println("Can't subtract matrices(rows and columns are not equal)");
                             break;
                             case 1:
-                                op.plusArrays();
+                                if(op.isAddable())op.plusArrays();
+                                else System.out.println("Can't add matrices(rows and columns are not equal)");
                             break;
                             case 2:
-                                op.multiplyArrays();
+                                if(op.isMulable())op.multiplyArrays();
+                                else System.out.println("Can't multiply matrices(Matrix 1's columns and Matrix 2' rows are not equal)");
                             break;
                             default: System.out.println("Return to the main menu."); 
                         }
                     } while (choice != 3);
+                    if(choice == 3 ) choice = 0;
                 break;
                 case 3:
                     System.out.println("Exiting the program.");

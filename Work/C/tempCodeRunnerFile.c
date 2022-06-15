@@ -1,0 +1,1 @@
+checkBit == 0

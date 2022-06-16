@@ -16,16 +16,20 @@ public class CalculatorApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(CalculatorApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-
+        FXMLLoader mainSceneLoader = new FXMLLoader(CalculatorApplication.class.getResource("MainScene.fxml"));
+        Scene scene = new Scene(mainSceneLoader.load(), 900, 600);
         Image icon;
         icon = new Image("increase-font-size.png");
-
-
-        stage.setTitle("Hello!");
+        stage.setTitle("Matrix Calculator");
         stage.getIcons().add(icon);
         stage.setScene(scene);
+
+        MainController mainController = mainSceneLoader.getController();
+        mainController.addMatrixPane(true, mainController.getLeftHeight());
+        mainController.addMatrixPane(false, mainController.getRightHeight());
+
+
+
 
         stage.show();
     }

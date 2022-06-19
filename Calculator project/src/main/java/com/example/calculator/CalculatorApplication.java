@@ -28,9 +28,6 @@ public class CalculatorApplication extends Application {
         mainController.addMatrixPane(true, mainController.getLeftHeight());
         mainController.addMatrixPane(false, mainController.getRightHeight());
 
-
-
-
         stage.show();
     }
 }

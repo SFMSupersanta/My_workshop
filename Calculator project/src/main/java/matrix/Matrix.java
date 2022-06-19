@@ -20,8 +20,8 @@ public class Matrix {
     public Matrix(int[][] matrix1, int[][] matrix2) {
         setMatrix1(matrix1);
         setMatrix2(matrix2);
-        setColumn1(matrix1[1].length);
-        setColumn2(matrix2[1].length);
+        setColumn1(matrix1[0].length);
+        setColumn2(matrix2[0].length);
         setRows1(matrix1.length);
         setRows2(matrix2.length);
     }
@@ -124,7 +124,7 @@ public class Matrix {
      * Matrices must be addable, the columns and rows myst be equal
      * @return A matrix that is the result of adding 2 matrices
      */
-    private int[][] getTotalMatrix() {
+    public int[][] getTotalMatrix() {
         int[][] result = new int[getRows1()][getColumn1()];
         if (getAddable()) {
             for (int i = 0; i < getRows1(); i++) {
@@ -139,7 +139,7 @@ public class Matrix {
      * Matrices must be subtractable, the columns and rows myst be equal
      * @return A matrix that is the result of subtracting 2 matrices
      */
-    private int[][] getDiffMatrix() {
+    public int[][] getDiffMatrix() {
         int[][] result = new int[getRows1()][getColumn1()];
         if (getAddable()) {
             for (int i = 0; i < getRows1(); i++)
@@ -161,7 +161,7 @@ public class Matrix {
      */
     public void setMatrix1(int[][] matrix1) {
         this.matrix1 = matrix1;
-        setColumn1(matrix1[1].length);
+        setColumn1(matrix1[0].length);
         setRows1(matrix1.length);
     }
 
@@ -179,7 +179,7 @@ public class Matrix {
      */
     public void setMatrix2(int[][] matrix2) {
         this.matrix2 = matrix2;
-        setColumn2(matrix2[1].length);
+        setColumn2(matrix2[0].length);
         setRows2(matrix2.length);
     }
 

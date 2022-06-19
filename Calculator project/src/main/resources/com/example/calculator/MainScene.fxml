@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <GridPane id="mainGrid" fx:id="mainGrid" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.MainController">
   <columnConstraints>
@@ -56,7 +57,10 @@
           <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="13.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextArea fx:id="ResultText" prefHeight="120.0" prefWidth="372.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="ResultText" prefHeight="120.0" prefWidth="372.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Monospaced Bold" size="24.0" />
+               </font></TextArea>
          </children>
       </GridPane>
    </children>

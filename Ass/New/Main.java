@@ -3,11 +3,10 @@ import src.Inputter;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         Inputter inputter = new Inputter();
         ArrayList<String> Options = new ArrayList<String>();
-        
+
         Options.add("List all brands");
         Options.add("Add a new brand");
         Options.add("Search a brand based on its ID");
@@ -27,49 +26,47 @@ public class Main {
         brandlist.loadFromFile("brands.txt");
         CarList carlist = new CarList(brandlist);
         carlist.loadFromFile("cars.txt");
-        do
-        {
+        do {
             choice = opsMenu.int_getChoice(Options);
-            switch(choice)
-            {
+            switch (choice) {
                 case 1:
                     brandlist.listBrand();
-                break;
+                    break;
                 case 2:
                     brandlist.addBrand();
-                break;
+                    break;
                 case 3:
                     choice = brandlist.searchID(inputter.inputNonBlankStr("Input brand ID to search"));
-                    if(choice != -1) 
-                    {
-                        System.out.println("Found: " + brandlist.get(choice)); 
+                    if (choice != -1) {
+                        System.out.println("Found: " + brandlist.get(choice));
                         choice = -1;
-                    }else System.out.println("Can't find band");
-                break;
+                    } else
+                        System.out.println("Can't find band");
+                    break;
                 case 4:
                     brandlist.updateBrand();
                     System.out.println("Saved");
-                break;
+                    break;
                 case 5:
                     brandlist.saveToFile("brands.txt");
                     System.out.println("Saved");
-                break;
+                    break;
                 case 6:
                     carlist.listCar();
-                break;
+                    break;
                 case 7:
                     carlist.printBasedBrandName();
-                break;
+                    break;
                 case 8:
                     carlist.addCar();
                     System.out.println("Added Car");
-                break;
+                    break;
                 case 9:
                     carlist.removeID();
-                break;
+                    break;
                 case 10:
                     carlist.updateCar();
-                break;
+                    break;
                 case 11:
                     carlist.saveToFile("cars.txt");
                 default:

@@ -1,25 +1,24 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args)
-    {
-        Person [] e = new Person[10];
+    public static void main(String[] args) {
+        Person[] e = new Person[10];
         int n = 0, c = 0;
-        do{
+        do {
             System.out.println("Worker (1); Officer(2): ");
             Scanner in = new Scanner(System.in);
             c = in.nextInt();
             in.nextLine();
-            if(c == 1){
-                //accept information of worker
+            if (c == 1) {
+                // accept information of worker
                 System.out.print("Enter worker name: ");
                 String name = in.next();
                 System.out.print("Enter worker working hours: ");
                 int hrs = in.nextInt();
                 e[n] = new Worker(name, hrs);
                 n++;
-            }else if(c == 2){
-                //accept information of Officer
+            } else if (c == 2) {
+                // accept information of Officer
                 System.out.print("Enter Officer name: ");
                 String name = in.nextLine();
                 System.out.print("Enter officer salary: ");
@@ -27,11 +26,11 @@ public class Main {
                 e[n] = new Officer(name, salary);
                 n++;
             }
-        }while(c != 0);
-        //print all objects of e
-        for(int i = 0; i < n; i++){
-        //print the instance of Worker only
-            if(e[i] instanceof Worker)
+        } while (c != 0);
+        // print all objects of e
+        for (int i = 0; i < n; i++) {
+            // print the instance of Worker only
+            if (e[i] instanceof Worker)
                 e[i].display();
         }
 

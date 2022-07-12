@@ -1,14 +1,12 @@
 import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         GenericCar<Car> carList = new GenericCar<Car>();
         int choice;
-        try
-        {
-            do
-            {
+        try {
+            do {
                 System.out.println("Input 1 to add new car to list");
                 System.out.println("Input 2 to display all cars");
                 System.out.println("Input 3 to see number of cars");
@@ -18,9 +16,9 @@ public class Main {
                 System.out.println("Your choice: ");
                 choice = in.nextInt();
                 in.nextLine();
-                switch (choice)
-                {
-                    case 0: break;
+                switch (choice) {
+                    case 0:
+                        break;
                     case 1:
                         Car car = new Car();
                         System.out.println("Input car's name:");
@@ -30,25 +28,25 @@ public class Main {
                         System.out.println("Input car's price:");
                         car.setPrice(in.nextDouble());
                         carList.add(car);
-                    break;
+                        break;
                     case 2:
                         carList.display();
-                    break;
+                        break;
                     case 3:
                         System.out.println(carList.size());
-                    break;
+                        break;
                     case 4:
                         System.out.println("List empty status is: " + carList.checkEmpty());
-                    break;
+                        break;
                     case 5:
                         System.out.println("The car's index to remove form the list is: ");
                         carList.remove(in.nextInt());
-                    break;
-                    default: System.out.println("Input a valid choice");
+                        break;
+                    default:
+                        System.out.println("Input a valid choice");
                 }
-            }while (choice != 0);
-        }catch(Exception e)
-        {
+            } while (choice != 0);
+        } catch (Exception e) {
             System.out.println("input error");
         }
     }

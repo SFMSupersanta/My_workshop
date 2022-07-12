@@ -22,7 +22,6 @@ public class HelloApplication extends Application {
         Image icon;
         icon = new Image("increase-font-size.png");
 
-
         stage.setTitle("Hello!");
         stage.getIcons().add(icon);
         stage.setScene(scene);

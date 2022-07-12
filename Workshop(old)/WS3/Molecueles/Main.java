@@ -1,9 +1,9 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import src.Molecules;
+
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
         ArrayList<Molecules> molarr = new ArrayList<Molecules>();
@@ -12,12 +12,10 @@ public class Main {
         double weight;
         boolean start = true;
         System.out.println("Molecular Information:");
-        do
-        {
+        do {
             System.out.print("\nEnter structure : ");
             structure = in.nextLine();
-            if(structure.equals("0")) 
-            {
+            if (structure.equals("0")) {
                 start = false;
                 continue;
             }
@@ -28,24 +26,23 @@ public class Main {
             in.nextLine();
             Molecules bufferMol = new Molecules(structure, name, weight);
             molarr.add(bufferMol);
-        }while(start);
+        } while (start);
         System.out.println();
-        for(int i = 0; i < molarr.size(); i++)
-        {
+        for (int i = 0; i < molarr.size(); i++) {
             molarr.get(i).display();
         }
     }
 }
 /*
-H20
-Water
-17.015
-CO2
-Carbon
-44.010
-NaCl
-Sodium
-58.443
-0
-
-*/
+ * H20
+ * Water
+ * 17.015
+ * CO2
+ * Carbon
+ * 44.010
+ * NaCl
+ * Sodium
+ * 58.443
+ * 0
+ * 
+ */

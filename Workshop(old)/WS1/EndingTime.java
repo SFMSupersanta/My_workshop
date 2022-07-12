@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class EndingTime {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -10,11 +11,12 @@ public class EndingTime {
         int last = in.nextInt();
         in.close();
         int status = 0, overtime;
-        if((last % 60) + minues >= 60) 
-        {
+        if ((last % 60) + minues >= 60) {
             status = 1;
             overtime = ((minues + last) % 60);
-        } else overtime = (minues + last)%60;
-        System.out.println("if an event starts at " + hour + " " + minues + " and lasts " + last + " minutes, it will end at " + (hour + (last / 60) + status) % 24 + " " + overtime);
+        } else
+            overtime = (minues + last) % 60;
+        System.out.println("if an event starts at " + hour + " " + minues + " and lasts " + last
+                + " minutes, it will end at " + (hour + (last / 60) + status) % 24 + " " + overtime);
     }
 }

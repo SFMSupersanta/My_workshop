@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
+
 public class IntArray {
 
     public static void main(String[] args) {
@@ -7,8 +8,7 @@ public class IntArray {
         System.out.println("Enter the number of elements in the array:");
         int n = in.nextInt();
         int a[] = new int[n];
-        for (int i = 0; i < n; i++)
-        {
+        for (int i = 0; i < n; i++) {
             a[i] = in.nextInt();
         }
         System.out.println("All elements in the array:" + Arrays.toString(a));

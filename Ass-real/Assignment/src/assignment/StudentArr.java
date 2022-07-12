@@ -4,16 +4,18 @@
  * and open the template in the editor.
  */
 package assignment;
+
 import java.util.ArrayList;
 
 /**
  *
  * @author Admin
  */
-public class StudentArr extends ArrayList<Student>{
+public class StudentArr extends ArrayList<Student> {
 
-    /** Constructor
-    */
+    /**
+     * Constructor
+     */
     public StudentArr() {
         super();
     }
@@ -23,10 +25,9 @@ public class StudentArr extends ArrayList<Student>{
      * @param id : String
      * @return true if id exists, false otherwise
      */
-    public boolean deleteByID(String id){
-        for(Student student : this)
-        {
-            if(id.equals(student.getID())){
+    public boolean deleteByID(String id) {
+        for (Student student : this) {
+            if (id.equals(student.getID())) {
                 this.remove(this.indexOf(student));
                 return true;
             }
@@ -34,17 +35,14 @@ public class StudentArr extends ArrayList<Student>{
         return false;
     }
 
-    /** 
+    /**
      * @category auxiliary method
      * @param id : String
      * @return Student, null if not found
-    */
-    public Student studentByID(String id)
-    {
-        for(Student student : this)
-        { 
-            if(id.equals(student.getID()))
-            {
+     */
+    public Student studentByID(String id) {
+        for (Student student : this) {
+            if (id.equals(student.getID())) {
                 return student;
             }
         }

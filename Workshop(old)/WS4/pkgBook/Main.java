@@ -1,8 +1,8 @@
 import java.util.Scanner;
 import src.Book;
+
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Book book = new Book();
         Scanner in = new Scanner(System.in);
         System.out.print("Enter title : ");

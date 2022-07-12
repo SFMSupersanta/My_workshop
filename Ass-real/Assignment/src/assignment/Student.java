@@ -141,22 +141,24 @@ public class Student {
         this.fE = fE;
         this.Ass = Ass;
     }
-    
+
     /**
      * @return true if Student isPassed, false otherwise.
-     * {@summary} Result >=5 Final exam>=4 All of other must be grater than 0
+     *         {@summary} Result >=5 Final exam>=4 All of other must be grater than
+     *         0
      */
-    public boolean isPassed()
-    {
-        if(pT == 0 || pE == 0 || fE == 0 || ass == 0 || wS == 0) return false;
-        if(fE < 4) return false;
-        if(0.1*(pT+ass+wS) + 0.4 * (pE) + 0.3 * (fE) < 5) return false;
+    public boolean isPassed() {
+        if (pT == 0 || pE == 0 || fE == 0 || ass == 0 || wS == 0)
+            return false;
+        if (fE < 4)
+            return false;
+        if (0.1 * (pT + ass + wS) + 0.4 * (pE) + 0.3 * (fE) < 5)
+            return false;
         return true;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return ID + "\t" + fullName + "\t" + pT + "\t" + ass + "\t" + wS + "\t" + pE + "\t" + fE;
     }
 

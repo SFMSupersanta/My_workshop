@@ -1,37 +1,34 @@
 import java.util.ArrayList;
 
-class GenericCar<Thing> 
-{
+class GenericCar<Thing> {
     Thing thing;
     private ArrayList<Thing> list = new ArrayList<Thing>();
-    public void add(Thing thing)
-    {
+
+    public void add(Thing thing) {
         list.add(thing);
     }
-    public void addMany(Thing[] things)
-    {
-        for (Thing thing : things)
-        {
+
+    public void addMany(Thing[] things) {
+        for (Thing thing : things) {
             list.add(thing);
         }
     }
-    public void remove(int index)
-    {
+
+    public void remove(int index) {
         list.remove(index);
     }
-    public void display()
-    {
-        for(Thing thing : list)
-        {
+
+    public void display() {
+        for (Thing thing : list) {
             System.out.println(thing);
         }
     }
-    public boolean checkEmpty()
-    {
+
+    public boolean checkEmpty() {
         return list.isEmpty();
     }
-    public int size()
-    {
+
+    public int size() {
         return list.size();
     }
 

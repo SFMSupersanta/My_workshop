@@ -6,7 +6,7 @@ package workshop2;
  * @author Admin
  */
 public class Student extends Persion {
-    String RollNum,Class;
+    String RollNum, Class;
     double Score;
 
     public Student() {
@@ -27,12 +27,12 @@ public class Student extends Persion {
 
     @Override
     public void Display() {
-        System.out.println(RollNum+"\t"+Name+"\t"+Class+"\t"+Score);
+        System.out.println(RollNum + "\t" + Name + "\t" + Class + "\t" + Score);
     }
 
     @Override
     public String toString() {
-        return RollNum+"\t"+Name+"\t"+Class+"\t"+Score;
+        return RollNum + "\t" + Name + "\t" + Class + "\t" + Score;
     }
-    
+
 }

@@ -6,7 +6,7 @@ package workshop2;
  * @author Admin
  */
 public class Persion {
-    String ID,Name,Address;
+    String ID, Name, Address;
     int Age;
 
     public Persion() {
@@ -50,10 +50,12 @@ public class Persion {
     public void setAge(int Age) {
         this.Age = Age;
     }
-    public String toString(){
-        return ID+"\t"+Name+"\t"+Age+"\t"+Address;
+
+    public String toString() {
+        return ID + "\t" + Name + "\t" + Age + "\t" + Address;
     }
-    public void Display(){
-        System.out.println(ID+"\t"+Name+"\t"+Age+"\t"+Address);
+
+    public void Display() {
+        System.out.println(ID + "\t" + Name + "\t" + Age + "\t" + Address);
     }
 }

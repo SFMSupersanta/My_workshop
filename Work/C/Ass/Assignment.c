@@ -8,15 +8,15 @@
 
 int main()
 {
-    custumer cus_arr[MAXCUS_SIZE];
+    customer cus_arr[MAXCUS_SIZE];
 
     int cus_num = 0;
     from_binary(cus_arr, &cus_num);
 
     char choices[CHOICE_SIZE][ADDRESS_SIZE];
-    strcpy(choices[0], "1. Input a number of custumer and write into a binary file");
-    strcpy(choices[1], "2. Input a custumer and write into a binary file");
-    strcpy(choices[2], "3. Show all custumers detailed infomation");
+    strcpy(choices[0], "1. Input a number of customer and write into a binary file");
+    strcpy(choices[1], "2. Input a customer and write into a binary file");
+    strcpy(choices[2], "3. Show all customers detailed infomation");
 
 
     int choice, inpsize;
@@ -24,7 +24,7 @@ int main()
     {
         for(int i = 0; i < CHOICE_SIZE; i++)
             printf("%s\n", choices[i]);
-        printf("You have the total ammount of %d custumers\n", cus_num);
+        printf("You have the total ammount of %d customers\n", cus_num);
         choice = getInt("Your choice(0 - 18)? ", 0, CHOICE_SIZE);
         switch(choice) {
             case 1:
@@ -48,9 +48,9 @@ int main()
     return 0; 
 }
 
-void print_cus(custumer* cus_arr, int cus_num)
+void print_cus(customer* cus_arr, int cus_num)
 {
-    printf("||%-30s||%-10s||%-30s||%-10s||%-10s||%-10s||%-16s||\n", "Custumer's name", "Birth day", "Custumer's adress", "Phone number", "Open date", "Balance", "Card number");
+    printf("||%-30s||%-10s||%-30s||%-10s||%-10s||%-10s||%-16s||\n", "Customer's name", "Birth day", "Customer's adress", "Phone number", "Open date", "Balance", "Card number");
 
     for(int i = 0; i < cus_num; i++)
     {
@@ -60,7 +60,7 @@ void print_cus(custumer* cus_arr, int cus_num)
     }
 }
 
-char* to_string(custumer cus)
+char* to_string(customer cus)
 {
     char* buffer = (char*) malloc(BUFFER_SIZE);
     snprintf(buffer, BUFFER_SIZE, "||%-30s||%2d/%2d/%4d||%-30s||%-10s||%2d/%2d/%-4d||%-10.4lf||%-16s||"
@@ -69,7 +69,7 @@ char* to_string(custumer cus)
     return buffer;
 }
 
-void input_mul(custumer* cus_arr,int* cus_num, int times)
+void input_mul(customer* cus_arr,int* cus_num, int times)
 {
     times += *cus_num;
     
@@ -79,26 +79,26 @@ void input_mul(custumer* cus_arr,int* cus_num, int times)
     }
 }
 
-void from_binary(custumer* cus_arr, int* cus_num)
+void from_binary(customer* cus_arr, int* cus_num)
 {
     *cus_num = 0;
-    FILE *fp = fopen("custumer.dat", "r+");
+    FILE *fp = fopen("customer.dat", "r+");
     if(fp == NULL) 
     {
         printf("Could not open file!\n");
         return;
     }
-    while(fread(&cus_arr[*cus_num], sizeof(custumer), 1, fp))
+    while(fread(&cus_arr[*cus_num], sizeof(customer), 1, fp))
     {
         *cus_num += 1;
     }
-    printf("Read from custumer.dat\n");
+    printf("Read from customer.dat\n");
     fclose(fp);
 }
 
-void to_binary(custumer* cus_arr, int cus_num)
+void to_binary(customer* cus_arr, int cus_num)
 {
-    FILE *fp = fopen("custumer.dat", "w");
+    FILE *fp = fopen("customer.dat", "w");
     if(fp == NULL) 
     {
         printf("Could not open file!\n");
@@ -106,18 +106,18 @@ void to_binary(custumer* cus_arr, int cus_num)
     }
     for(int i = 0; i < cus_num; i++)
     {
-        fwrite(&cus_arr[i], sizeof(custumer), 1, fp);
+        fwrite(&cus_arr[i], sizeof(customer), 1, fp);
     }
-    printf("written to file custumer.dat\n");
+    printf("written to file customer.dat\n");
     fclose(fp);
 }
 
-custumer inpCus(int ind)
+customer inpCus(int ind)
 {
     if(ind != 0) {
-        printf("Custumer #%d\n", ind);
+        printf("Customer #%d\n", ind);
     }
-    custumer inp;
+    customer inp;
 
     printf("Enter your full name: ");
     fgets(inp.name, NAME_SIZE, stdin);

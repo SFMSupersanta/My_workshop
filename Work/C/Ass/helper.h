@@ -22,7 +22,7 @@ typedef struct {
     double balance;
     char cardnum[CARD_SIZE];
 
-} custumer;
+} customer;
 
 // get card id information
 int getcardid(char* fone);
@@ -51,15 +51,15 @@ int inc_to_num(char* string);
 // get a valid date from user
 int getdate(date* day, char* msg);
 
-// get all information about a custumer and return custumer struct
-custumer inpCus(int ind);
+// get all information about a customer and return customer struct
+customer inpCus(int ind);
 
-void to_binary(custumer* cus_arr, int cus_num);
+void to_binary(customer* cus_arr, int cus_num);
 
-void from_binary(custumer* cus_arr, int* cus_num);
+void from_binary(customer* cus_arr, int* cus_num);
 
-void input_mul(custumer* cus_arr,int* cus_num, int times);
+void input_mul(customer* cus_arr,int* cus_num, int times);
 
-char* to_string(custumer cus);
+char* to_string(customer cus);
 
-void print_cus(custumer* cus_arr, int cus_num);
+void print_cus(customer* cus_arr, int cus_num);

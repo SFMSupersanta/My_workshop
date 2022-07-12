@@ -1,2 +1,2 @@
 # premiumrepo
-This repo is for comercial purpose only so ofcrouse it's private
+Just a repo to add my work into cus I'm not a fully pledged programmer yet

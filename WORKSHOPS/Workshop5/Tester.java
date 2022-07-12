@@ -12,7 +12,7 @@ public class Tester {
         obj2.enroll();
         obj2.educate();
         
-        BeeColony df= new BeeColony(3000, "wasp", "land");
+        Role df= new BeeColony(3000, "wasp", "land");
         System.out.println(df);
         df.createWorker();
 

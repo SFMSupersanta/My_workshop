@@ -33,7 +33,8 @@
 			"ctype.h": "c",
 			"random": "cpp",
 			"stdlib.h": "c",
-			"stdio.h": "c"
+			"stdio.h": "c",
+			"string": "c"
 		},
 		"java.project.sourcePaths": [
 			"premiumrepo/Ass/Old",

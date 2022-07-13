@@ -36,7 +36,8 @@
 			"stdio.h": "c",
 			"string": "c",
 			"sstream": "c",
-			"regex": "c"
+			"regex": "c",
+			"cstring": "c"
 		},
 		"java.project.sourcePaths": [
 			"premiumrepo/Ass/Old",
